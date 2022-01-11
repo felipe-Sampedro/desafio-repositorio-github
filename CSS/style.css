@@ -10,7 +10,7 @@ font-size: 25px;
 #grid-container{
     display: grid;
     height: 100vh;
-    grid-template-rows: 150px 60px auto auto auto;
+    grid-template-rows: 200px 60px auto auto auto;
     grid-template-areas: 
         "header"
         "menu"
@@ -22,10 +22,11 @@ font-size: 25px;
 header{
     background-color:#ff6090 ;
     display: flex;
-    align-items: center;
-    justify-content: center;
+/*     align-items: center;
+    justify-content: center; */
     grid-area: header;
 }
+
 
 div.header-logo{
     width: 280px;
@@ -34,6 +35,58 @@ div.header-logo{
     background-size:contain;
     background-repeat: no-repeat;
 }
+
+
+@keyframes llamativo {
+    0%{
+        background-color: #ffb2ff;
+    }
+    50%{
+        background-color: palevioletred;
+    }
+    100%{
+        background-color: magenta;
+    }
+}
+
+.transformacion-logo{
+    background-color: #6a0080;
+    padding: 40px;
+    animation: llamativo 2s linear 0s infinite;
+}
+
+
+
+
+
+
+@keyframes mas-llamativo {
+    0%{
+        transform: translate(0,0);
+    }
+    20%{
+        transform: translate(20vw,0%);
+    }
+    40%{
+        transform: translate(40vw,0%);
+    }
+    60%{
+        transform: translate(40vw,40%);
+    }
+    80%{
+        transform: translate(20vw,40%);
+    }
+    100%{
+        transform: translate(5vw,40%);
+    }
+}
+
+.tranformacion-logo-sus{
+    position:absolute;
+    padding: 40px;
+    animation: mas-llamativo 3s linear 0s infinite;
+}
+
 
 
 nav{
@@ -107,6 +160,12 @@ ul {
     align-items: center;
     gap: 15px;
 }
+
+
+.catalogo:hover{
+    transform: scale(1.1);
+}
+
 
 #productos2{
     margin-top: 15px;
@@ -194,7 +253,7 @@ label.gen-nac-form{
 }
 
 .direccion p{
-    background-image: linear-gradient(to left, #ea80fc,#ffb2ff,#6a0080);
+    background-image: linear-gradient(to left, green,yellow,red);
     width: 100%;
     height: auto;
     text-align: center;
@@ -205,7 +264,7 @@ label.gen-nac-form{
 @media screen and (min-width:768px){
     #grid-container{
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 150px 50px auto auto auto;
+        grid-template-rows: 250px auto auto auto auto;
         grid-template-areas: 
             "header header header"
             "menu contenido1 contenido1"
@@ -225,7 +284,12 @@ label.gen-nac-form{
         background-image: url(../Images/logo.png);
         background-size:contain;
         background-repeat: no-repeat;
-    
+    }
+
+    .transformacion-logo{
+        display: flex;
+        width: 450px;
+        justify-content: center;
     }
 
 
@@ -253,9 +317,20 @@ label.gen-nac-form{
     
     /* fin menu despelegable tablet */
 
+
+    .form-full-grid{
+        grid-column:2/4 ;
+    }
+    
+
+
     .info-pie p{
         padding: 3px;
     }
+
+/*     .catalogo:hover{
+        transform: scale(1.1);
+    } */
 
     .direccion{
         display: flex;
@@ -265,7 +340,7 @@ label.gen-nac-form{
     }
     
     .direccion p{
-        background-image: linear-gradient(to right, #03a9f4,#67daff,#007ac1);
+        background-image: linear-gradient(to right, green,yellow,red);
         width: 100%;
         height: auto;
         text-align: center;
@@ -301,6 +376,40 @@ label.gen-nac-form{
         background-repeat: no-repeat;
     
     }
+
+    .transformacion-logo{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+
+ /*    @keyframes mas-llamativo {
+        0%{
+            transform: translate(100%,0);
+        }
+        10%{
+            transform: translate(250%,0);
+        }
+        20%{
+            transform: translate(350%,0%);
+        }
+        40%{
+            transform: translate(350%,50%);
+        }
+        60%{
+            transform: translate(50%,50%);
+        }
+        80%{
+            transform: translate(0%,50%);
+        }
+        100%{
+            transform: translate(0%,0%);
+        }
+    }
+     */
+
+
 
     nav{
         display: flex;
@@ -386,9 +495,13 @@ ul {
     grid-column:1/4 ;
 }
 
+.form-full-grid{
+    grid-column:1/4 ;
+}
+
 
 .direccion p{
-    background-image: linear-gradient(#ccff90,#ffffc2,#99cc60);
+    background-image: radial-gradient(green,yellow,red);
     width: 100%;
     height: auto;
     text-align: center;

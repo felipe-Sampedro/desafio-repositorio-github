@@ -10,17 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-
+    <!-- Libreria Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
 </head>
 <body>
     <div id="grid-container">
         <header class="header">
-            <div class="header-logo"></div>
-        </header>
+            <div class="tranformacion-logo-sus">
+                <div class="header-logo"></div>
+            </div>
+            </header>
 
-        <nav class="header-menu">
+        <nav class="header-menu animate__animated animate__bounce">
             <ul>
                 <li><a href="../index.html"><p>Home</p></a></li>
                 <li><p>Facial</p>
@@ -66,58 +69,60 @@
 
   
             
+        <div class="transition animate__animated animate__backInDown form-full-grid">
+            <section id="formulario">
+                <form class="datos" action="" method="get" enctype="text/plain">
+                    <fieldset>
+                        <legend>DATOS PERSONALES</legend>
+                        <div class="campos-formulario datos">
+                            <label class="label-form" for="Nombre">Nombre</label> 
+                            <input type="text" id="nombre" placeholder="Ingresar nombre" required>
+                        </div> 
+                        <div class="campos-formulario">
+                            <label class="label-form"  for="Apellido">Apellido</label>
+                            <input type="text" id="Apellido" placeholder="Apellidos">
+                        </div>
+                        <div class="campos-formulario">
+                            <label class="label-form"  for="Documento_ID">Documento ID</label>
+                            <input type="number" name="Documento_ID" id="# Documento ID" required>
+                        </div>
+                        <div class="campos-formulario">
+                            <label class="label-form"  for="email">Correo Electronico</label>   
+                            <input type="email" name="email" id="">
+                        </div>   
+                        <div class="genero-nancion-formulario">                     
+                            <label class="gen-nac-form" for="Sexo">Hombre</label>
+                            <input type="radio" name="sexo" value="hombre">
+                            <label class="gen-nac-form"  for="Sexo">Mujer</label>
+                            <input class="gen-nac-form"  type="radio" name="sexo" value="mujer">
+                            <label for="Pais">Pais de origen</label>
+                                <select name="pais" id="">
+                                    <option value="C">Colombia</option>
+                                    <option value="A">Argentina</option>
+                                    <option value="P">Peru</option>
+                                    <option value="E">Ecuador</option>
+                                    <option value="Pa">Paraguay</option>
+                                    <option value="U">Uruguay</option>
+                                    <option value="Ch">Chile</option>
+                                    <option value="B">Brazil</option>
+                                    <option value="M">Mexico</option>
+                                    <option value="V">Venezuela</option>
+                                </select>
+                        </div>                            
+                        <div class="tratamiento_datos">
+                            <h3>POLITICA DE TRATAMIENDO Y PROTECCION DE DATOS</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ad adipisci aspernatur cumque dolorem voluptas odio consectetur ullam vel magnam ea omnis ab laborum repudiandae eius et eveniet voluptatum quaerat neque delectus iste quam fugit. Id laborum tempore dolore incidunt beatae suscipit maxime nihil consectetur?</p>
+                        </div>
+                        <div class="botones">
+                            <input type="checkbox" name="acepto">SI acepto
+                            <input type="submit">
+                            <input type="reset">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
 
-        <section id="formulario">
-            <form class="datos" action="" method="get" enctype="text/plain">
-                <fieldset>
-                    <legend>DATOS PERSONALES</legend>
-                    <div class="campos-formulario">
-                        <label class="label-form" for="Nombre">Nombre</label> 
-                        <input type="text" id="nombre" placeholder="Ingresar nombre" required>
-                     </div> 
-                     <div class="campos-formulario">
-                        <label class="label-form"  for="Apellido">Apellido</label>
-                        <input type="text" id="Apellido" placeholder="Apellidos">
-                    </div>
-                    <div class="campos-formulario">
-                        <label class="label-form"  for="Documento_ID">Documento ID</label>
-                        <input type="number" name="Documento_ID" id="# Documento ID" required>
-                    </div>
-                    <div class="campos-formulario">
-                        <label class="label-form"  for="email">Correo Electronico</label>   
-                        <input type="email" name="email" id="">
-                    </div>   
-                    <div class="genero-nancion-formulario">                     
-                        <label class="gen-nac-form" for="Sexo">Hombre</label>
-                        <input type="radio" name="sexo" value="hombre">
-                        <label class="gen-nac-form"  for="Sexo">Mujer</label>
-                        <input class="gen-nac-form"  type="radio" name="sexo" value="mujer">
-                        <label for="Pais">Pais de origen</label>
-                            <select name="pais" id="">
-                                <option value="C">Colombia</option>
-                                <option value="A">Argentina</option>
-                                <option value="P">Peru</option>
-                                <option value="E">Ecuador</option>
-                                <option value="Pa">Paraguay</option>
-                                <option value="U">Uruguay</option>
-                                <option value="Ch">Chile</option>
-                                <option value="B">Brazil</option>
-                                <option value="M">Mexico</option>
-                                <option value="V">Venezuela</option>
-                            </select>
-                    </div>                            
-                    <div class="tratamiento_datos">
-                        <h3>POLITICA DE TRATAMIENDO Y PROTECCION DE DATOS</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, ad adipisci aspernatur cumque dolorem voluptas odio consectetur ullam vel magnam ea omnis ab laborum repudiandae eius et eveniet voluptatum quaerat neque delectus iste quam fugit. Id laborum tempore dolore incidunt beatae suscipit maxime nihil consectetur?</p>
-                    </div>
-                    <div class="botones">
-                        <input type="checkbox" name="acepto">SI acepto
-                        <input type="submit">
-                        <input type="reset">
-                    </div>
-                </fieldset>
-            </form>
-        </section>
         
         <section class="direccion">
             <p>VISITANOS EN</p>
